@@ -1,0 +1,27 @@
+﻿@model TestModel
+@{
+    ViewData["Title"] = "Welcome!";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>@Model.Username - @Model.Level</p>
+
+<form asp-controller="Home" asp-action="Test" method="post">
+    <label asp-for="Id"></label>
+    <input asp-for="Id"/>
+    <span asp-validation-for="Id" class="text-danger"></span>
+
+    <label asp-for="Username"></label>
+    <input asp-for="Username"/>
+    <span asp-validation-for="Username" class="text-danger"></span>
+
+    <label asp-for="Level"></label>
+    <input asp-for="Level"/>
+    <span asp-validation-for="Level" class="text-danger"></span>
+
+    <input type="submit" value="Send"/>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial"/>
+}
