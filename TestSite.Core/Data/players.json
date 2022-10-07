@@ -1,0 +1,20 @@
+﻿[
+  {
+    "id": "7D98F501-8EEC-4204-87D2-0D0528D639A2",
+    "username": "Atomiz",
+    "xp": 500,
+    "health": 100
+  },
+  {
+    "id": "7AFF05F6-49C3-4FA4-BC0F-A3D043213A6F",
+    "username": "Onix",
+    "xp": 0,
+    "health": 2
+  },
+  {
+    "id": "15C679BE-C223-428B-A0F1-A2B1ECAB0573",
+    "username": "Elish",
+    "xp": 15,
+    "health": 100
+  }
+]
