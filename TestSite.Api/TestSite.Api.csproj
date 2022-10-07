@@ -7,15 +7,15 @@
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-      <DocumentationFile>bin\Debug\TestSite.Api.xml</DocumentationFile>
+        <DocumentationFile>bin\Debug\TestSite.Api.xml</DocumentationFile>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\TestSite.Core\TestSite.Core.csproj" />
+        <ProjectReference Include="..\TestSite.Core\TestSite.Core.csproj"/>
     </ItemGroup>
 
 </Project>

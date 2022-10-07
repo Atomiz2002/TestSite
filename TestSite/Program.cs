@@ -8,7 +8,9 @@ WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 string? connectionString = builder.Configuration.GetConnectionString("MySqlConnection");
 
-builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseMySQL(connectionString).UseSnakeCaseNamingConvention());
+builder.Services.AddDbContext<ApplicationDbContext>(
+	options => options.UseMySQL(connectionString).UseSnakeCaseNamingConvention()
+);
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
@@ -19,12 +21,9 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<IPlayerService, PlayerService>();
 
-
 WebApplication app = builder.Build();
 
-if (app.Environment.IsDevelopment()) {
-	app.UseMigrationsEndPoint();
-} else {
+if (app.Environment.IsDevelopment()) { app.UseMigrationsEndPoint(); } else {
 	app.UseExceptionHandler("/Home/Error");
 	app.UseHsts();
 }

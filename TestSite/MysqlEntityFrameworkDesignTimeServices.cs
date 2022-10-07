@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Design;
 using MySql.EntityFrameworkCore.Extensions;
 
-namespace TestSite; 
+namespace TestSite;
 
 // ReSharper disable once UnusedType.Global
 public class MysqlEntityFrameworkDesignTimeServices : IDesignTimeServices {

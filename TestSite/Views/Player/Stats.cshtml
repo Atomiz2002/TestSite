@@ -1,5 +1,5 @@
 ﻿@using TestSite.Core.Models
-@model IEnumerable<Player>
+@model IEnumerable<TestSite.Core.Models.Player>
 
 @{
     ViewData["Title"] = "Players Stats";
@@ -9,20 +9,20 @@
 <form asp-controller="Player" asp-action="Stats">
     <table class="table table-striped">
         <thead>
-            <th>Id</th>
-            <th>Username</th>
-            <th>Xp</th>
-            <th>Health</th>
+        <th>Id</th>
+        <th>Username</th>
+        <th>Xp</th>
+        <th>Health</th>
         </thead>
         <tbody>
-            @foreach (Player player in Model) {
-                <tr>
-                    <td>@player.Id</td>
-                    <td>@player.Username</td>
-                    <td>@player.Xp</td>
-                    <td>@player.Health</td>
-                </tr>
-            }
+        @foreach (Player player in Model) {
+            <tr>
+                <td>@player.Id</td>
+                <td>@player.Username</td>
+                <td>@player.Xp</td>
+                <td>@player.Health</td>
+            </tr>
+        }
         </tbody>
     </table>
 </form>
