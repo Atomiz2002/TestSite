@@ -29,7 +29,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="9e0fa267-6f5b-4b47-8be7-9cd1f38cd3cb">
-      <console name="MySql" type="STANDARD" schema="mysql" session="Main" />
+      <console name="MySql" type="STANDARD" schema="" session="Main" />
     </connection>
     <connection id="a8e77a66-a099-44f8-af9e-70632864fbbf">
       <console name="Postgre" type="STANDARD" schema="" session="Main" />
