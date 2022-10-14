@@ -1,4 +1,3 @@
-using TestSite.Core.Contracts;
 using TestSite.Core.Services;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);

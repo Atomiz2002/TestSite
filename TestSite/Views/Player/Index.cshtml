@@ -1,14 +1,79 @@
-﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
-@model TestSite.Core.Models.Player
+﻿@using TestSite.Core.Models
+@model PlayerIndexViewModel
 
-@{
-    ViewData["Title"] = "Welcome!";
+
+<h1>Players</h1>
+
+<hr/>
+
+@if (Model.Players.Any()) {
+    <table class="table">
+        <thead>
+            <th>Username</th>
+            <th>Xp</th>
+            <th>Health</th>
+            <th></th>
+            <th></th>
+        </thead>
+        <tbody>
+            @{
+                foreach (PlayerViewModel p in Model.Players) {
+                    <tr class="btn-outline-dark">
+                        <td>@p.Username</td>
+                        <td>@p.Xp</td>
+                        <td>@p.Health</td>
+                        <td>
+                            <form asp-action="Edit">
+                                <input type="hidden" name="id" value="@p.Id"/>
+                                <input type="submit" class="btn btn-warning" value="Edit"/>
+                            </form>
+                        </td>
+                        <td>
+                            <form asp-action="Delete">
+                                <input type="hidden" name="id" value="@p.Id"/>
+                                <input type="submit" class="btn btn-danger" value="Delete"
+                                       onclick="return confirm('Youre bouta delete @p.Username')"/>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
 }
-<h1>@ViewData["Title"]</h1>
 
-<form asp-controller="Player" asp-action="Stats">
-    <label asp-for="Username"></label>
-    <input asp-for="Username"/>
 
-    <input type="submit" value="Send"/>
+<form asp-action="Create">
+    <div class="card mt-2" style="width: fit-content">
+        @if (Model.Player.Id == Guid.Empty) {
+            <h4 class="card-header">Create New Player</h4>
+        } else {
+            <h4 class="card-header">Update @Model.Player.Username</h4>
+        }
+        <div class="card-body">
+            <input type="hidden" asp-for="@Model.Player.Id" value="@Model.Player.Id"/>
+            <div>
+                <input asp-for="@Model.Player.Username" class="form-control" placeholder="Username" value="@Model.Player.Username"/>
+                <span asp-validation-for="@Model.Player.Username" class="small text-danger"/>
+            </div>
+            <div>
+                <input asp-for="@Model.Player.Xp" class="form-control mt-2" placeholder="Xp" value="@Model.Player.Xp"/>
+                <span asp-validation-for="@Model.Player.Xp" class="small text-danger"/>
+            </div>
+            <div>
+                <input asp-for="@Model.Player.Health" class="form-control mt-2" placeholder="Health" value="@Model.Player.Health"/>
+                <span asp-validation-for="@Model.Player.Health" class="small text-danger"/>
+            </div>
+            @if (Model.Player.Id == Guid.Empty) {
+                <button type="submit" class="btn btn-success mt-2">Create</button>
+            } else {
+                <button type="submit" class="btn btn-success mt-2">Update</button>
+                <button asp-action="Index" class="btn btn-danger float-end mt-2">Cancel</button>
+            }
+        </div>
+    </div>
 </form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial"/>
+}

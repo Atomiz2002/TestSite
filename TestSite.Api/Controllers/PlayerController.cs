@@ -1,7 +1,7 @@
 ﻿using System.Net.Mime;
 using Microsoft.AspNetCore.Mvc;
-using TestSite.Core.Contracts;
 using TestSite.Core.Models;
+using TestSite.Core.Services;
 
 namespace TestSite.Api.Controllers;
 
@@ -19,7 +19,7 @@ public class PlayerController : Controller {
 	/// <returns>Ok with all players</returns>
 	[HttpGet]
 	[Produces(MediaTypeNames.Application.Json)]
-	[ProducesResponseType(typeof(IEnumerable<Player>), StatusCodes.Status200OK)]
+	[ProducesResponseType(typeof(IEnumerable<PlayerViewModel>), StatusCodes.Status200OK)]
 	public async Task<IActionResult> GetAll() => Ok(await _playerService.GetAll());
 
 }

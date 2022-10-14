@@ -1,0 +1,14 @@
+F:\C#_Projects\TestSite\TestSite.Data\obj\Debug\net6.0\TestSite.Data.csproj.AssemblyReference.cache
+F:\C#_Projects\TestSite\TestSite.Data\obj\Debug\net6.0\TestSite.Data.GeneratedMSBuildEditorConfig.editorconfig
+F:\C#_Projects\TestSite\TestSite.Data\obj\Debug\net6.0\TestSite.Data.AssemblyInfoInputs.cache
+F:\C#_Projects\TestSite\TestSite.Data\obj\Debug\net6.0\TestSite.Data.AssemblyInfo.cs
+F:\C#_Projects\TestSite\TestSite.Data\obj\Debug\net6.0\TestSite.Data.csproj.CoreCompileInputs.cache
+F:\C#_Projects\TestSite\TestSite.Data\bin\Debug\net6.0\TestSite.Data.deps.json
+F:\C#_Projects\TestSite\TestSite.Data\bin\Debug\net6.0\TestSite.Data.runtimeconfig.json
+F:\C#_Projects\TestSite\TestSite.Data\bin\Debug\net6.0\TestSite.Data.dll
+F:\C#_Projects\TestSite\TestSite.Data\bin\Debug\net6.0\TestSite.Data.pdb
+F:\C#_Projects\TestSite\TestSite.Data\obj\Debug\net6.0\TestSite.Data.dll
+F:\C#_Projects\TestSite\TestSite.Data\obj\Debug\net6.0\refint\TestSite.Data.dll
+F:\C#_Projects\TestSite\TestSite.Data\obj\Debug\net6.0\TestSite.Data.pdb
+F:\C#_Projects\TestSite\TestSite.Data\obj\Debug\net6.0\TestSite.Data.genruntimeconfig.cache
+F:\C#_Projects\TestSite\TestSite.Data\obj\Debug\net6.0\ref\TestSite.Data.dll

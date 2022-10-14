@@ -5,16 +5,17 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <UserSecretsId>aspnet-TestSite-C519DF80-03A0-4C8E-BDA1-A3DA2D787B19</UserSecretsId>
+        <LangVersion>default</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>
-        <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true"/>
+        <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.9"/>
-        <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.9"/>
-        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.9"/>
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.9" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.9" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.9" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.9">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -22,7 +23,13 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\TestSite.Core\TestSite.Core.csproj"/>
+        <ProjectReference Include="..\TestSite.Core\TestSite.Core.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Login.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Register.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\_ViewImports.cshtml" />
     </ItemGroup>
 
 </Project>
